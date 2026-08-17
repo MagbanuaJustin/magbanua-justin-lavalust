@@ -14,19 +14,19 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
-            --lava: #dd4814;
-            --lava-dim: #b83a10;
-            --lava-glow: rgba(221,72,20,0.15);
-            --lava-glow-strong: rgba(221,72,20,0.25);
-            --bg: #0a0a0b;
-            --bg2: #111113;
-            --bg3: #18181b;
-            --border: rgba(255,255,255,0.07);
-            --border-hot: rgba(221,72,20,0.35);
-            --text: #f4f4f5;
-            --text-muted: #71717a;
-            --text-dim: #3f3f46;
-            --mono: 'JetBrains Mono', monospace;
+            --lava: #39ff88;
+            --lava-dim: #1f6b45;
+            --lava-glow: rgba(57,255,136,0.15);
+            --lava-glow-strong: rgba(57,255,136,0.25);
+            --bg: #0d1117;
+            --bg2: #131a24;
+            --bg3: #10161d;
+            --border: rgba(57,255,136,0.07);
+            --border-hot: rgba(57,255,136,0.35);
+            --text: #d7e2ea;
+            --text-muted: #6b7c8c;
+            --text-dim: #3f4c58;
+            --mono: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
             --sans: 'Unbounded', sans-serif;
         }
 
@@ -76,12 +76,12 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
         .orb-1 {
             width: 600px; height: 600px;
             top: -200px; left: -100px;
-            background: radial-gradient(circle, rgba(221,72,20,0.12) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(57,255,136,0.12) 0%, transparent 70%);
         }
         .orb-2 {
             width: 400px; height: 400px;
             top: 200px; right: -100px;
-            background: radial-gradient(circle, rgba(221,72,20,0.07) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(57,255,136,0.07) 0%, transparent 70%);
         }
 
         /* ── LAYOUT ── */
@@ -103,7 +103,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             padding: 1.5rem 2rem;
             border-bottom: 1px solid var(--border);
             backdrop-filter: blur(12px);
-            background: rgba(10,10,11,0.6);
+            background: rgba(13,17,23,0.6);
             max-width: 100%;
         }
 
@@ -148,16 +148,31 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
         .nav-links a:hover { color: var(--text); background: var(--bg3); }
 
         .nav-links .btn-nav {
-            color: var(--text);
+            color: #0d1117;
             background: var(--lava);
             padding: 0.4rem 1rem;
             border-radius: 6px;
             margin-left: 0.5rem;
+            font-weight: 700;
             transition: background 0.2s, box-shadow 0.2s;
         }
 
         .nav-links .btn-nav:hover {
-            background: var(--lava-dim);
+            background: #7dffb0;
+            box-shadow: 0 0 20px var(--lava-glow-strong);
+        }
+
+        .nav-links .btn-student {
+            background: transparent;
+            color: var(--lava);
+            border: 1px solid var(--border-hot);
+            margin-left: 0.25rem;
+        }
+
+        .nav-links .btn-student:hover {
+            background: var(--lava-glow);
+            color: var(--lava);
+            border-color: var(--lava);
             box-shadow: 0 0 20px var(--lava-glow-strong);
         }
 
@@ -173,9 +188,9 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(221,72,20,0.1);
+            background: rgba(57,255,136,0.1);
             border: 1px solid var(--border-hot);
-            color: #f97316;
+            color: var(--lava);
             font-size: 0.75rem;
             font-weight: 600;
             letter-spacing: 0.08em;
@@ -211,7 +226,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
         .hero h1 .word-lava { color: var(--lava); }
         .hero h1 .word-lust {
             color: transparent;
-            -webkit-text-stroke: 1.5px rgba(255,255,255,0.3);
+            -webkit-text-stroke: 1.5px rgba(215,226,234,0.3);
         }
 
         .hero-sub {
@@ -248,12 +263,13 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
         .btn-primary {
             background: var(--lava);
-            color: #fff;
+            color: #0d1117;
+            font-weight: 700;
             box-shadow: 0 0 0 0 var(--lava-glow);
         }
 
         .btn-primary:hover {
-            background: var(--lava-dim);
+            background: #7dffb0;
             box-shadow: 0 0 30px var(--lava-glow-strong), 0 4px 15px rgba(0,0,0,0.3);
             transform: translateY(-1px);
         }
@@ -266,7 +282,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
         .btn-ghost:hover {
             color: var(--text);
-            border-color: rgba(255,255,255,0.2);
+            border-color: rgba(57,255,136,0.2);
             background: var(--bg3);
         }
 
@@ -371,7 +387,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
         .feature-icon {
             width: 40px; height: 40px;
-            background: rgba(221,72,20,0.1);
+            background: rgba(57,255,136,0.1);
             border: 1px solid var(--border-hot);
             border-radius: 10px;
             display: flex;
@@ -439,7 +455,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             overflow-x: auto;
         }
 
-        .code-body .kw { color: #f97316; }
+        .code-body .kw { color: var(--lava); }
         .code-body .fn { color: #60a5fa; }
         .code-body .str { color: #86efac; }
         .code-body .cm { color: #3f3f46; }
@@ -471,7 +487,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
         .dir-item:hover {
             border-color: var(--border-hot);
             color: var(--text);
-            background: rgba(221,72,20,0.05);
+            background: rgba(57,255,136,0.05);
         }
 
         .dir-item .dir-icon { color: var(--lava); font-size: 0.9rem; }
@@ -566,6 +582,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
     <div class="nav-links">
         <a href="https://lavalust.netlify.app/docs/" target="_blank">Docs</a>
         <a href="https://github.com/ronmarasigan/LavaLust" target="_blank">GitHub</a>
+        <a href="/student" class="btn-nav btn-student">Student Page →</a>
         <a href="https://lavalust.netlify.app/docs/" target="_blank" class="btn-nav">Get Started →</a>
     </div>
 </nav>
@@ -574,7 +591,8 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 <div class="hero wrap">
     <div class="badge">v<?php echo config_item('VERSION') ?? '4.x'; ?> — Now Available</div>
     <h1>
-        <span class="word-lava">Magbanua</span><span class="word-lust">Justin</span><br>Framework
+        <span class="word-lava">Super Magbanua</span><br>
+        <span class="word-lust">LavaLust Framework</span>
     </h1>
     <p class="hero-sub">
         A lightweight, expressive PHP MVC framework built for developers who want structure without the bloat.
@@ -747,7 +765,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             <span>memory <span><?php echo lava_instance()->performance->memory_usage(); ?></span></span>
             <?php if(config_item('environment') === 'development'): ?>
             <span>version <span><?php echo config_item('version'); ?></span></span>
-            <span style="color: #dd4814;">● development</span>
+            <span style="color: #39ff88;">● development</span>
             <?php endif; ?>
         </div>
         <div class="footer-links">

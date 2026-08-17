@@ -13,10 +13,6 @@ class StudentMiddleware
             session_start();
         }
 
-        if (!isset($_SESSION['student_access'])) {
-            $_SESSION['student_access'] = true;
-        }
-
         if (!empty($_SESSION['student_access']) && $_SESSION['student_access'] === true) {
             // Access granted -> continue to the controller method
             return $next();
