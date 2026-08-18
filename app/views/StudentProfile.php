@@ -165,8 +165,8 @@
 <body>
 
 <nav>
-  <a href="<?= site_url('student') ?>">Home</a>
-  <a href="<?= site_url('student/profile') ?>" class="active">Student Profile</a>
+  <a href="<?= site_url('student') ?>">Super Home</a>
+  <a href="<?= site_url('student/profile') ?>" class="active">Super Profile</a>
 </nav>
 
 <div class="access-banner">
