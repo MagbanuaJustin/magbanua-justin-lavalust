@@ -102,6 +102,12 @@
     font-size: 20px;
     color: #0d1117;
     flex-shrink: 0;
+    overflow: hidden;
+  }
+  .avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .card-head h1{
     font-size: 20px;
@@ -176,7 +182,9 @@
 
 <div class="card">
   <div class="card-head">
-    <div class="avatar">JM</div>
+    <div class="avatar">
+      <img src="<?= base_url('assets/img/1659e647-927d-4f41-8c39-8e0847902284.jpg') ?>" alt="Profile Photo">
+    </div>
     <div>
       <h1><?= htmlspecialchars($name ?? 'Magbanua Justin James E.') ?></h1>
       <p><?= htmlspecialchars($course ?? 'BS Information Technology') ?></p>
